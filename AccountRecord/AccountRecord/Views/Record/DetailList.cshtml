@@ -17,13 +17,13 @@
         <tr>
             <th>#</th>
             <th>
-                @Html.DisplayName("類別")
+                類別
             </th>
             <th>
-                @Html.DisplayName("日期")
+                日期
             </th>
             <th>
-                @Html.DisplayName("總金額")
+                總金額
             </th>
             <th></th>
         </tr>
@@ -35,10 +35,10 @@
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Date)
+                @item.Date.ToString("yyyy-MM-dd")
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TotalAmount)
+                @item.TotalAmount.ToString("N0")
             </td>
 
         </tr>

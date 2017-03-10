@@ -12,6 +12,7 @@ namespace AccountRecord.Models.ViewModels
         public int TotalAmount { get; set; }
         public DateTime Date { get; set; }
         public String Type{ get; set; }
+        public string Memo { get; set; }
     }
 
 
