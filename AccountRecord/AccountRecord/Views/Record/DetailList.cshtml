@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AccountRecord.Models.ViewModels.RecordViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DetailList</title>
+</head>
+<body>
+
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>
+                @Html.DisplayName("類別")
+            </th>
+            <th>
+                @Html.DisplayName("日期")
+            </th>
+            <th>
+                @Html.DisplayName("總金額")
+            </th>
+            <th></th>
+        </tr>
+    @{var index = 1; }
+    @foreach (var item in Model) {
+        <tr>
+            <td>@(index++)</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalAmount)
+            </td>
+
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
