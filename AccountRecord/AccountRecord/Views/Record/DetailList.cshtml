@@ -25,6 +25,9 @@
             <th>
                 總金額
             </th>
+            <th>
+                備註
+            </th>
             <th></th>
         </tr>
     @{var index = 1; }
@@ -38,7 +41,10 @@
                 @item.Date.ToString("yyyy-MM-dd")
             </td>
             <td>
-                @item.TotalAmount.ToString("N0")
+                @item.TotalAmount.ToString("#,###")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memo)
             </td>
 
         </tr>

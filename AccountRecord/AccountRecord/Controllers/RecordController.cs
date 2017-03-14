@@ -19,8 +19,8 @@ namespace AccountRecord.Controllers
         {
             var itemlist = new List<RecordViewModel>
             {
-                new RecordViewModel {Type="收入",TotalAmount=1000,Date=new DateTime(2017,3,9)},
-                new RecordViewModel {Type="支出",TotalAmount=200,Date=new DateTime(2017,5,9)}
+                new RecordViewModel {Type="收入",TotalAmount=1000,Date=new DateTime(2017,3,9),Memo=""},
+                new RecordViewModel {Type="支出",TotalAmount=200,Date=new DateTime(2017,5,9),Memo="Test"}
             };
             return View(itemlist);
         }
